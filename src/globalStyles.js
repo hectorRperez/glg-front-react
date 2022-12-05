@@ -15,6 +15,20 @@ const GlobalStyle = createGlobalStyle`
         text-decoration: none;
         font-family: var(--body-font-barlow);
     }
+
+    .containerElement{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    ul{
+      margin: 0;
+      padding: 0;
+    }
+
+    li{
+      list-style-type: none;
+    }
 `
 
 export default GlobalStyle;

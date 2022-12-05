@@ -1,67 +1,67 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@700;800;900&display=swap');
 
 @font-face {
-    font-family: 'gilroy-regular';
-    src: url('./assets/fonts/Gilroy/Gilroy-Regular.otf');
+  font-family: 'gilroy-regular';
+  src: url('./assets/fonts/Gilroy/Gilroy-Regular.otf');
 }
 
 @font-face {
-    font-family: 'gilroy-semibold';
-    src: url('./assets/fonts/Gilroy/Gilroy-Semibold.otf');
+  font-family: 'gilroy-semibold';
+  src: url('./assets/fonts/Gilroy/Gilroy-Semibold.otf');
 }
 
 @font-face {
-    font-family: 'gilroy-medium';
-    src: url('./assets/fonts/Gilroy/Gilroy-Medium.otf');
+  font-family: 'gilroy-medium';
+  src: url('./assets/fonts/Gilroy/Gilroy-Medium.otf');
 }
 
 @font-face {
-    font-family: 'gilroy-bold';
-    src: url('./assets/fonts/Gilroy/Gilroy-Bold.otf');
+  font-family: 'gilroy-bold';
+  src: url('./assets/fonts/Gilroy/Gilroy-Bold.otf');
 }
 
 @font-face {
-    font-family: 'gilroy-black';
-    src: url('./assets/fonts/Gilroy/Gilroy-Bold.otf');
+  font-family: 'gilroy-black';
+  src: url('./assets/fonts/Gilroy/Gilroy-Bold.otf');
 }
 
 :root {
-    /* ============= Font and typography ============= */
-    --body-font-gilroy-regular: 'gilroy-regular', sans-serif;
-    --body-font-gilroy-semi: 'gilroy-semibold';
-    --body-font-gilroy-medium: 'gilroy-medium', sans-serif;
-    --body-font-gilroy-bold: 'gilroy-bold', sans-serif;
-    --body-font-gilroy-black: 'gilroy-black', sans-serif;
+  /* ============= Font and typography ============= */
+  --body-font-gilroy-regular: 'gilroy-regular', sans-serif;
+  --body-font-gilroy-semi: 'gilroy-semibold';
+  --body-font-gilroy-medium: 'gilroy-medium', sans-serif;
+  --body-font-gilroy-bold: 'gilroy-bold', sans-serif;
+  --body-font-gilroy-black: 'gilroy-black', sans-serif;
 
-    --body-font-barlow: 'Barlow', sans-serif;
+  --body-font-barlow: 'Barlow', sans-serif;
 
-    --biggest-font-size: 2.62em;
+  --biggest-font-size: 2.62em;
 
-    --h1-font-size: 2em;
-    --h2-font-size: 1.5em;
-    --h3-font-size: 1.25em;
-    --h4-font-size: 1.12em;
-    --h5-font-size: 1em;
+  --h1-font-size: 2em;
+  --h2-font-size: 1.5em;
+  --h3-font-size: 1.25em;
+  --h4-font-size: 1.12em;
+  --h5-font-size: 1em;
 
 
-    /* ======== Colors ============= */
-    --main-blue-1: #101F55;
-    --main-bg: #041423;
-    --main-blue-2: #1A659D;
-    --main-blue3: #1D77D4;
-    --main-blue-4: #4496EB;
+  /* ======== Colors ============= */
+  --main-blue-1: #101F55;
+  --main-bg: #041423;
+  --main-blue-2: #1A659D;
+  --main-blue3: #1D77D4;
+  --main-blue-4: #4496EB;
 
-    --secondary-black-1: #000000;
-    --secondary-gris: #333333;
-    --secondary-orange-1: #E04D01;
-    --secondary-orange-2: #FF7700;
+  --secondary-black-1: #000000;
+  --secondary-gris: #333333;
+  --secondary-orange-1: #E04D01;
+  --secondary-orange-2: #FF7700;
 
-    --gris-1: #A7A8A9;
-    --gris-2: #CACBCB;
-    --gris-3: #DCDCDD;
-    --gris-4: #EDEEEE;
-    --gris-5: #F0F0F0;
-    --gris-6: #FAFAFA;
-    --gris-7: #878787;
-    --white: #FFFFFF;
+  --gris-1: #A7A8A9;
+  --gris-2: #CACBCB;
+  --gris-3: #DCDCDD;
+  --gris-4: #EDEEEE;
+  --gris-5: #F0F0F0;
+  --gris-6: #FAFAFA;
+  --gris-7: #878787;
+  --white: #FFFFFF;
 }

@@ -1,0 +1,74 @@
+.ourClientSection .swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.ourClientSection .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.ourClientSection .swiper-slide img {
+  display: block;
+  object-fit: contain;
+  width: 180px;
+}
+
+.ourClientSection .swiper-pagination {
+  display: none;
+}
+
+.ourClientSection .mySwiper .swiper-button-next::after,
+.ourClientSection .mySwiper .swiper-button-prev::after {
+  font-size: 18px !important;
+  color: white;
+  background-color: rgba(42, 55, 62, 20%);
+  clip-path: circle(50% at 50% 50%);
+}
+
+.ourClientSection .mySwiper .swiper-button-next,
+.mySwiper .swiper-button-prev {
+  height: 40px !important;
+  width: 40px !important;
+  text-align: center;
+}
+
+.ourClientSection .mySwiper .swiper-button-next::after {
+  height: 100%;
+  width: 100%;
+  padding-left: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ourClientSection .mySwiper .swiper-button-prev {
+  height: 40px !important;
+  width: 40px !important;
+  text-align: center;
+  margin-top: -15px;
+}
+
+
+
+.ourClientSection .mySwiper .swiper-button-prev::after {
+  height: 100%;
+  width: 100%;
+  padding-right: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

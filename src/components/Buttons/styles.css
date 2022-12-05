@@ -1,0 +1,29 @@
+/* Globals Styles */
+@import "../../styles.scss";
+
+.button-main {
+  background: var(--main-blue3);
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0px 5px 20px rgb(29 119 212 / 25%);
+  color: var(--white);
+  font-size: 14px;
+  margin-top: 24px;
+  padding: 14px 20px;
+  text-align: center;
+}
+
+.button-large {
+  height: 54px;
+  width: 248px;
+}
+
+.button-secondary {
+  background-color: #FF7700;
+}
+
+.button-medium {
+  width: 160px;
+  height: 49px;
+  font-family: var(--body-font-gilroy-semi);
+}

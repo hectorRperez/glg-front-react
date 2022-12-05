@@ -1,0 +1,44 @@
+.LogisticsSection .swiper {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+
+.LogisticsSection .swiper-slide-next {
+  scale: 1.2;
+  opacity: 1 !important;
+}
+
+.LogisticsSection .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  height: 585px;
+  opacity: 0.2;
+}
+
+/* .LogisticsSection .swiper-slide img { */
+/* opacity: 0.2; */
+/* border: 1px solid white; */
+/* } */
+
+.LogisticsSection .swiper-pagination {
+  display: none;
+}
+
+.LogisticsSection .mySwiper .swiper-button-next,
+.LogisticsSection .mySwiper .swiper-button-prev {
+  display: none;
+}
