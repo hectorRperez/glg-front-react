@@ -1,12 +1,11 @@
-import React from 'react'
+import { React, useState } from 'react'
 
 import styled from "styled-components";
 
 import Logo from "../../assets/img/logo-white.svg";
 
 const Container = styled.div`
-	height: 80vh;
-	position: absolute;
+	position: relative;
 	top: 0;
 	right: 0;
 	left: 0;
@@ -19,12 +18,16 @@ const Wrapper = styled.div`
 `
 
 const Nav = styled.nav`
+  background-color: transparent;
 	padding:42px 80px;
 	display:flex;
     justify-content: space-between;
 	width: 100%;
-	position: relative;
+  top: 0;
+  left: 0;
+	position: fixed;
 	z-index: 10;
+  transition: all 0.5s ease;
 `
 
 const Menu = styled.div`
@@ -37,30 +40,43 @@ const MenuItem = styled.div`
 `
 
 export default function Navbar() {
-	return (
-		<Container>
-			<Wrapper>
-				<Nav>
-					<img src={Logo} alt="" />
-					<Menu>
-						<MenuItem>
-							<a href="">Shippers</a>
-						</MenuItem>
-						<MenuItem>
-							<a href="">Carriers</a>
-						</MenuItem>
-						<MenuItem>
-							<a href="">About Us</a>
-						</MenuItem>
-						<MenuItem>
-							<a href="">Job&Careers</a>
-						</MenuItem>
-						<MenuItem>
-							<a href="">Blog</a>
-						</MenuItem>
-					</Menu>
-				</Nav>
-			</Wrapper>
-		</Container>
-	)
+
+  const [navbar, setNavbar] = useState(false);
+
+  const changeBackground = () => {
+    if (window.scrollY >= 80) {
+      setNavbar(true)
+    } else {
+      setNavbar(false)
+    }
+  }
+
+  window.addEventListener("scroll", changeBackground)
+
+  return (
+    <Container>
+      <Wrapper>
+        <Nav className={navbar ? "activeNavScroll" : " "}>
+          <img src={Logo} alt="" />
+          <Menu>
+            <MenuItem>
+              <a href="">Shippers</a>
+            </MenuItem>
+            <MenuItem>
+              <a href="">Carriers</a>
+            </MenuItem>
+            <MenuItem>
+              <a href="">About Us</a>
+            </MenuItem>
+            <MenuItem>
+              <a href="">Job&Careers</a>
+            </MenuItem>
+            <MenuItem>
+              <a href="">Blog</a>
+            </MenuItem>
+          </Menu>
+        </Nav>
+      </Wrapper>
+    </Container>
+  )
 }
