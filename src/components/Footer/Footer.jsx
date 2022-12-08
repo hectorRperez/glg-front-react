@@ -16,6 +16,7 @@ import "../../styles.scss";
 const Container = styled.footer`
   width: 100%;
   position: relative;
+  z-index: -1;
 
   margin: 0 auto;
   margin-top: 89px;

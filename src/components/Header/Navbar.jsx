@@ -1,8 +1,11 @@
-import { React, useState } from 'react'
+import clsx from 'clsx';
+import { React, useState, useEffect } from 'react'
 
 import styled from "styled-components";
 
 import Logo from "../../assets/img/logo-white.svg";
+
+import { Button } from "../Buttons/index";
 
 const Container = styled.div`
 	position: relative;
@@ -21,7 +24,7 @@ const Nav = styled.nav`
   background-color: transparent;
 	padding:42px 80px;
 	display:flex;
-    justify-content: space-between;
+  justify-content: space-between;
 	width: 100%;
   top: 0;
   left: 0;
@@ -39,44 +42,175 @@ const MenuItem = styled.div`
 	margin: 30px 20px;
 `
 
+/** Only Navbar movil components */
+
+const ContainerMovil = styled.div`
+  width: 95%;
+  margin: 0 auto;
+  position: relative;
+  background-color: red;
+`
+
+const NavbarOnlyMovil = styled.nav`
+  padding: 15px 10px;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  background-color: transparent;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 101;
+  transition: all 0.5s ease;
+`
+
+const MenuMovil = styled.div`
+  background-color: #041320;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  height: 100%;
+  width: 100%;
+  display: table;
+  text-align: center;
+`
+
 export default function Navbar() {
 
-  const [navbar, setNavbar] = useState(false);
+  const [isMovil, setIsMovil] = useState(() => {
+    return window.innerWidth <= 800 ? true : false;
+  });
+  const [isScroll, setIsScroll] = useState(false);
+  const [isToggle, setIsToggle] = useState(false);
 
-  const changeBackground = () => {
-    if (window.scrollY >= 80) {
-      setNavbar(true)
+  const setBackgroundNav = () => {
+    if (window.scrollY > 80) {
+      setIsScroll(true)
     } else {
-      setNavbar(false)
+      setIsScroll(false)
     }
   }
 
-  window.addEventListener("scroll", changeBackground)
+  useEffect(() => {
+    window.addEventListener("scroll", setBackgroundNav)
+  })
+
+
+  function NavbarDesktop() {
+    return (
+      <Container>
+        <Wrapper>
+          <Nav className={isScroll ? "activeNavScroll" : " "}>
+            <img src={Logo} alt="" />
+            <Menu>
+              <MenuItem>
+                <a href="">Shippers</a>
+              </MenuItem>
+              <MenuItem>
+                <a href="">Carriers</a>
+              </MenuItem>
+              <MenuItem>
+                <a href="">About Us</a>
+              </MenuItem>
+              <MenuItem>
+                <a href="">Job&Careers</a>
+              </MenuItem>
+              <MenuItem>
+                <a href="">Blog</a>
+              </MenuItem>
+            </Menu>
+          </Nav>
+        </Wrapper>
+      </Container>
+    )
+  }
+
+  function NavbarMovil() {
+
+    const classNav = clsx("btnMovilMenu", {
+      "toggleAct": isToggle,
+    })
+
+    return (
+      <ContainerMovil>
+        <NavbarOnlyMovil className={isScroll ? "activeNavScroll" : " "}>
+          <a href="">
+            <img src={Logo} alt="" />
+          </a>
+          <a onClick={() => {
+            setIsToggle(!isToggle)
+            let body = document.querySelector("body")
+
+            if (!isToggle) {
+              body.style.overflow = "hidden";
+            } else {
+              body.style.overflow = "auto";
+            }
+          }}
+            className={classNav}>
+            <span className='lines'></span>
+          </a>
+        </NavbarOnlyMovil>
+        {isToggle &&
+          <MenuMovil className="item animate__animated animate__zoomIn">
+            <ul className='menu-list'>
+              <li className="item animate__animated animate__fadeInRight">
+                <a href="">Home</a>
+              </li>
+              <li className="item animate__animated animate__fadeInLeft">
+                <a href="">Shippers</a>
+              </li>
+              <li className="item animate__animated animate__fadeInRight">
+                <a href="">Carriers</a>
+              </li>
+              <li className="item animate__animated animate__fadeInLeft">
+                <a href="">About Us</a>
+              </li>
+              <li className="item animate__animated animate__fadeInRight">
+                <a href="">Job&Careers</a>
+              </li>
+              <li className="item animate__animated animate__fadeInLeft">
+                <a href="">Blog</a>
+              </li>
+              <Button>
+                Join our network
+              </Button>
+              <div className="socialMedia__wrapper">
+                <a href="">
+                  <i class='bx bxl-facebook' ></i>
+                </a>
+                <a href="">
+                  <i class='bx bxl-twitter' ></i>
+                </a>
+                <a href="">
+                  <i class='bx bxl-instagram' ></i>
+                </a>
+                <a href="">
+                  <i class='bx bxl-linkedin' ></i>
+                </a>
+              </div>
+            </ul>
+          </MenuMovil>
+        }
+      </ContainerMovil>
+    )
+  }
+
+  /** 
+  * Custom Button 
+  * @param {Boolean} isMovil it is true or false 
+  * @return {Function} return NavbarMovil if it is in movil or NavbarDesktop if it is in Desktop 
+  */
 
   return (
-    <Container>
-      <Wrapper>
-        <Nav className={navbar ? "activeNavScroll" : " "}>
-          <img src={Logo} alt="" />
-          <Menu>
-            <MenuItem>
-              <a href="">Shippers</a>
-            </MenuItem>
-            <MenuItem>
-              <a href="">Carriers</a>
-            </MenuItem>
-            <MenuItem>
-              <a href="">About Us</a>
-            </MenuItem>
-            <MenuItem>
-              <a href="">Job&Careers</a>
-            </MenuItem>
-            <MenuItem>
-              <a href="">Blog</a>
-            </MenuItem>
-          </Menu>
-        </Nav>
-      </Wrapper>
-    </Container>
+    <>
+      {
+        isMovil ?
+          NavbarMovil() :
+          NavbarDesktop()
+      }
+    </>
   )
 }

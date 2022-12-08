@@ -1,3 +1,5 @@
+@import url("../../styles.scss");
+
 .activeNavScroll {
   padding: 20px !important;
   background-color: #041320 !important;
@@ -34,3 +36,122 @@
 /* height: 100%; */
 /* object-fit: cover; */
 /* } */
+
+
+/* Only class for Movil */
+
+.navbarMovil {
+  padding: 15px 10px;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.btnMovilMenu {
+  height: 30px;
+  width: 30px;
+  position: fixed;
+  right: 25px;
+  z-index: 10;
+}
+
+.btnMovilMenu>span {
+  background-color: #FF7700;
+  height: 2px;
+  border-radius: 1px;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -1px 0 0 -15px;
+  transition: height 100ms;
+}
+
+.btnMovilMenu>span::before {
+  bottom: -7px;
+  content: "";
+  background-color: #FF7700;
+  height: 2px;
+  border-radius: 1px;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  margin-left: -15px;
+  transition: all 100ms;
+}
+
+.btnMovilMenu>span::after {
+  top: -7px;
+  content: "";
+  background-color: #FF7700;
+  height: 2px;
+  border-radius: 1px;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  margin-left: -15px;
+  transition: all 100ms;
+}
+
+.btnMovilMenu.toggleAct>span {
+  height: 0;
+}
+
+.btnMovilMenu.toggleAct>span::after,
+.btnMovilMenu.toggleAct>span::before {
+  background-color: #FF7700;
+  top: 1px;
+}
+
+.btnMovilMenu.toggleAct>span::after {
+  transform: rotate(45deg);
+}
+
+.btnMovilMenu.toggleAct>span::before {
+  transform: rotate(-45deg);
+}
+
+
+.menu-list {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.item {
+  padding: 2px 0;
+}
+
+.item a {
+  color: white;
+  display: inline-block;
+  font-size: 44px;
+  font-family: var(--body-font-gilroy-bold);
+}
+
+.socialMedia__wrapper {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  margin-top: 120px;
+  justify-content: center;
+  gap: 10px;
+}
+
+.socialMedia__wrapper a {
+  font-size: 35px;
+}
+
+.socialMedia__wrapper a i {
+  color: #041320;
+  background-color: white;
+  border-radius: 5px;
+}
+
+
+
+/* .toggle-act.act>span::after, */
