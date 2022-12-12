@@ -8,3 +8,19 @@ export const desktop = (props) => {
     }
   `;
 }
+
+export const tablet = (props) => {
+  return css`
+    @media only screen and (max-width:800px) {
+      ${props}
+    }
+  `;
+}
+
+export const movil = (props) => {
+  return css`
+    @media only screen and (max-width:470px) {
+      ${props}
+    }
+  `;
+}

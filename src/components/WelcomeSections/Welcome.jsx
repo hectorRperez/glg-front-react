@@ -9,6 +9,8 @@ import "../../styles.scss";
 
 import bg from "../../assets/img/bg.svg"
 
+import { desktop, tablet } from "../../responsive";
+
 const Container = styled.section`
 	background-image: url(${(props) => props.bg});
 	background-position: center center;
@@ -64,6 +66,7 @@ const StatisticsWrapper = styled.div`
 const StatisticsItem = styled.div`
 	text-align: center;
 	width: 33.3%;
+  ${tablet({ marginTop: "25px" })}
 `
 
 const WrapperItems = styled.div`
@@ -71,6 +74,11 @@ const WrapperItems = styled.div`
 	justify-content: space-around;
 	width: 100%;
 	margin-bottom: 25px;
+  ${tablet({
+  flexDirection: "column",
+  justifyContent: "center",
+  alignItems: "center"
+})}
 `
 
 const NumberStatistics = styled.h2`
@@ -86,62 +94,62 @@ const InfoStatistics = styled.span`
 `
 
 export default function Welcome() {
-	return (
-		<Container bg={bg}>
-			<SmallTitle>
-				Welcome to Global Logistics Group
-			</SmallTitle>
-			<Title>
-				Making transportation fast and safe
-			</Title>
-			<Info>
-				As a leading provider of domestic
-				logistics and freight broker in Stafford,
-				Virginia, we help you move
-				your freight quickly, safely, and efficiently. Our expertise in freight forwarding guarantees the
-				best
-				possible results for all parties involved in the transportation process. Don’t waste your
-				investment.
-			</Info>
+  return (
+    <Container bg={bg}>
+      <SmallTitle style={{}}>
+        Welcome to Global Logistics Group
+      </SmallTitle>
+      <Title>
+        Making transportation fast and safe
+      </Title>
+      <Info>
+        As a leading provider of domestic
+        logistics and freight broker in Stafford,
+        Virginia, we help you move
+        your freight quickly, safely, and efficiently. Our expertise in freight forwarding guarantees the
+        best
+        possible results for all parties involved in the transportation process. Don’t waste your
+        investment.
+      </Info>
 
-			<StatisticsWrapper>
+      <StatisticsWrapper>
 
-				<WrapperItems>
+        <WrapperItems>
 
-					{/* item 1 */}
-					<StatisticsItem>
-						<NumberStatistics>
-							15Y
-						</NumberStatistics>
-						<InfoStatistics>
-							Average Loads Per Day
-						</InfoStatistics>
-					</StatisticsItem>
+          {/* item 1 */}
+          <StatisticsItem>
+            <NumberStatistics>
+              15Y
+            </NumberStatistics>
+            <InfoStatistics>
+              Average Loads Per Day
+            </InfoStatistics>
+          </StatisticsItem>
 
-					{/* item 2 */}
-					<StatisticsItem>
-						<NumberStatistics>
-							90+
-						</NumberStatistics>
-						<InfoStatistics>
-							Best Team
-						</InfoStatistics>
-					</StatisticsItem>
+          {/* item 2 */}
+          <StatisticsItem>
+            <NumberStatistics>
+              90+
+            </NumberStatistics>
+            <InfoStatistics>
+              Best Team
+            </InfoStatistics>
+          </StatisticsItem>
 
-					{/* item 3 */}
-					<StatisticsItem>
-						<NumberStatistics>
-							500+
-						</NumberStatistics>
-						<InfoStatistics>
-							Total Client
-						</InfoStatistics>
-					</StatisticsItem>
-				</WrapperItems>
-				<Button>
-					More about us
-				</Button>
-			</StatisticsWrapper>
-		</Container>
-	)
+          {/* item 3 */}
+          <StatisticsItem>
+            <NumberStatistics>
+              500+
+            </NumberStatistics>
+            <InfoStatistics>
+              Total Client
+            </InfoStatistics>
+          </StatisticsItem>
+        </WrapperItems>
+        <Button>
+          More about us
+        </Button>
+      </StatisticsWrapper>
+    </Container>
+  )
 }

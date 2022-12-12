@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -43,13 +43,28 @@ const Client = styled.img`
 `
 
 function OurClients() {
+
+
+  /**
+    * @param {integer} numbersOfElements value is the numbers of elements that slider show in display
+   */
+  let numbersOfElements = 4;
+
+  if (window.innerWidth < 800) {
+    numbersOfElements = 2;
+  }
+
+  if (window.innerWidth < 400) {
+    numbersOfElements = 1;
+  }
+
   return (
     <Container className="ourClientSection">
       <TitleSection>
         Our Clients
       </TitleSection>
       <Swiper
-        slidesPerView={4}
+        slidesPerView={numbersOfElements}
         spaceBetween={30}
         slidesPerGroup={1}
         loop={true}

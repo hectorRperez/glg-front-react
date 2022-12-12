@@ -12,6 +12,7 @@ import { imagesBanner } from "../../data"
 /* Custom component */
 import { Button } from "../Buttons/index";
 
+import { movil } from "../../responsive"
 
 
 // Import Swiper styles
@@ -44,9 +45,11 @@ const SlideInfo = styled.div`
 const TitleInfo = styled.h1`
 	color: var(--white);
 	font-family: var(--body-font-barlow);
-	font-size: 48px;
+	font-size: 40px;
 	font-weight: 900;
 	text-align: left;
+  width: 70%;
+  ${movil({ width: "40%" })}
 `
 
 export default function Slider() {
