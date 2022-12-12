@@ -3,6 +3,7 @@
 .activeNavScroll {
   padding: 20px !important;
   background-color: #041320 !important;
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
 }
 
 .swiper {
@@ -29,16 +30,6 @@
   -webkit-align-items: center;
   align-items: center;
 }
-
-/* .swiper-slide img { */
-/* display: block; */
-/* width: 100%; */
-/* height: 100%; */
-/* object-fit: cover; */
-/* } */
-
-
-/* Only class for Movil */
 
 .navbarMovil {
   padding: 15px 10px;

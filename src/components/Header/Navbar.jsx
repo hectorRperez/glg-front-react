@@ -40,6 +40,52 @@ const Menu = styled.div`
 
 const MenuItem = styled.div`
 	margin: 30px 20px;
+
+  & a{
+    display: inline-block;
+    position: relative;
+    padding-bottom: 0px;
+    transition: color .35s ease;
+  }
+
+  & a:hover{
+    color: white;
+  }
+
+  & a::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    transition: width 0s ease, background .35s ease;
+  }
+
+  & a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background: var(--secondary-orange-1);
+    transition: width .35s ease;
+}
+
+  & a:hover::before {
+    width: 100%;
+    background-color: var(--secondary-orange-1);
+    transition: width .35s ease;
+  }
+
+  & a:hover::after {
+    width: 100%;
+    background: transparent;
+    transition: all 0s ease;
+  }
 `
 
 /** Only Navbar movil components */
@@ -48,7 +94,6 @@ const ContainerMovil = styled.div`
   width: 95%;
   margin: 0 auto;
   position: relative;
-  background-color: red;
 `
 
 const NavbarOnlyMovil = styled.nav`
