@@ -9,6 +9,9 @@ import video from "../../assets/img/jobs.mp4"
 import "./styles.css"
 import "../../styles.scss";
 
+/** layouts */
+import { tablet } from "../../responsive";
+
 /*  Custom Button component */
 import { Button } from "../Buttons/index";
 
@@ -22,6 +25,7 @@ const Container = styled.div`
 const InfoContent = styled.div`
   height: 100%;
   width: 45%;
+  ${tablet({ width: "80%" })}
   position: absolute;
   top: 0;
   left: 0;

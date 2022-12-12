@@ -8,6 +8,7 @@ import Col from 'react-bootstrap/Col';
 
 /* Global Styles */
 import "../../styles.scss";
+import "./styles.css";
 
 import { locations } from "../../data";
 
@@ -15,8 +16,10 @@ import CardLocation from "./CardLocation";
 
 const Container = styled.div`
   width: 90%;
+  height: 100%;
   margin: 0 auto;
   margin-top: 80px;
+  position: relative;
 `
 const Title = styled.h2`
   font-family: var(--body-font-barlow);
@@ -35,12 +38,12 @@ export default function Citys() {
         {
           /* TODO: CONTINUAR CREANDO EL COMPONENTE */
           locations.map((item) => (
-            <Col xs={4} key={item.id}>
+            <Col className='cardLocationWrapper' lg={4} xs={12} key={item.id}>
               <CardLocation
                 img={item.src}
                 city={item.city}
                 numberPhone={item.number}
-                direcction={item.direcction}
+                OfficeDirecction={item.direcction}
               />
             </Col>
           ))

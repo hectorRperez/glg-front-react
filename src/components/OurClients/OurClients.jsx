@@ -54,7 +54,7 @@ function OurClients() {
     numbersOfElements = 2;
   }
 
-  if (window.innerWidth < 400) {
+  if (window.innerWidth < 650) {
     numbersOfElements = 1;
   }
 

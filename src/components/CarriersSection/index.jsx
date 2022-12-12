@@ -7,7 +7,12 @@ import Col from 'react-bootstrap/Col';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import Img from '../../assets/img/carrier_1.png'
+import Img from '../../assets/img/carrier_1.png';
+import map from "../../assets/img/map.png";
+
+
+/** layouts  */
+import { tablet } from "../../responsive";
 
 /* Custom class */
 import "../../styles.scss";
@@ -18,6 +23,10 @@ const Container = styled.div`
   width: 90%;
   margin: 0 auto;
   margin-top: 77px;
+  background-image: url(${(props) => props.map});
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: contain;
 `
 
 const CarriersImg = styled.img`
@@ -33,6 +42,7 @@ const Info = styled.div`
   justify-content: center;
   height: 100%;
   flex-direction: column;
+  ${tablet({ marginTop: "20px" })};
 `
 
 const SmallTag = styled.div`
@@ -64,7 +74,7 @@ const InfoContent = styled.p`
 
 export default function CarriersSection() {
   return (
-    <Container>
+    <Container map={map}>
       <Row>
         <Col xl={6}>
           <CarriersImg src={Img} />

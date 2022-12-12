@@ -2,36 +2,9 @@ import React from 'react'
 
 import styled from "styled-components";
 
-/** responsive only for Desktop */
-import { desktop } from "../../responsive";
-
 import 'boxicons'
 
-
-const Card = styled.div`
-  width: 100%;
-  background-color: white;
-  margin-top: 24px;
-  border-radius: 20px;
-  overflow: auto;
-`
-
-// style={{
-// '&::before': {
-// content: `''`,
-// position: 'absolute',
-// top: '0',
-// left: '0',
-// display: "block",
-// width: "100%",
-// height: "100%",
-// background: "rgb(16, 31, 85)",
-// background: "linear-gradient(190deg, rgba(16, 31, 85, 0.6) 38%, rgba(4, 20, 35, 1) 91%)",
-// zIndex: "2",
-// transition: "0.5s all",
-// opacity: "0"
-// }
-// }}
+import "./styles.css";
 
 const LocationImage = styled.img`
   height: 50%;
@@ -60,8 +33,8 @@ const InfoContainer = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 34px;
   margin-bottom: 14px;
+  gap: 24px;
 `
 const Number = styled.small`
   font-family: var(--body-font-gilroy-medium);
@@ -77,22 +50,22 @@ const Direcction = styled.small`
 `
 
 export default function CardLocation(props) {
-  const { city, img, numberPhone, direcction } = props;
+  const { city, img, numberPhone, OfficeDirecction } = props;
 
   return (
-    <Card>
+    <div className='cardLocation'>
       <LocationImage src={img} />
-      <BodyCard>
+      <BodyCard className='cardBody'>
         <Title>
           {city}
         </Title>
         <InfoWrapper>
-          <InfoContainer>
+          <InfoContainer className='cardItem'>
             <box-icon
               name='phone'
               type='solid'
               color="#333333"
-              size={"24px"}
+              size={"30px"}
               style={{
                 transform: "rotate(270deg)"
               }}></box-icon>
@@ -100,23 +73,23 @@ export default function CardLocation(props) {
               {numberPhone}
             </Number>
           </InfoContainer>
-          {direcction
+          {OfficeDirecction
             ? <InfoContainer>
               <box-icon
                 name='map'
                 type='solid'
                 color="#333333"
-                size={"24px"}
+                size={"30px"}
               >
               </box-icon>
               <Direcction>
-                {direcction}
+                {OfficeDirecction}
               </Direcction>
             </InfoContainer>
             : ""
           }
         </InfoWrapper>
       </BodyCard>
-    </Card>
+    </div>
   )
 }

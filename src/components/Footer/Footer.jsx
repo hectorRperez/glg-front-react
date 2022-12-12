@@ -16,7 +16,7 @@ import "../../styles.scss";
 const Container = styled.footer`
   width: 100%;
   position: relative;
-  z-index: -1;
+  z-index: 1;
 
   margin: 0 auto;
   margin-top: 89px;
@@ -97,7 +97,7 @@ export default function Footer() {
     <Container img={bg_footer}>
       <Wrapper>
         <Row>
-          <Col md={12} lg={5} className="d-flex justify-content-center">
+          <Col md={12} lg={5} className="d-flex justify-content-center mb-5">
             <img src={glg_logo} width="40%" alt="" />
           </Col>
           <Col md={12} lg={3}>
@@ -199,6 +199,6 @@ export default function Footer() {
           </Col>
         </Row>
       </Wrapper>
-    </Container>
+    </Container >
   )
 }
