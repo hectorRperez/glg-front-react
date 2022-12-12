@@ -4,6 +4,9 @@ import styled from "styled-components";
 /** Variables de estilos */
 import "../../styles.scss";
 
+/** layouts */
+import { movil } from "../../responsive";
+
 const Service = styled.img`
   height: 302px;
   width: 380px;
@@ -16,6 +19,7 @@ const InfoWrapper = styled.div`
   text-align: left;
   width: 360px;
   height: 100%;
+  ${movil({ width: "80%" })}
 `
 
 const Container = styled.div`

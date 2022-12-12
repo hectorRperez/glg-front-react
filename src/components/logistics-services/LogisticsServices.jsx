@@ -45,13 +45,26 @@ const Title = styled.h2`
 `
 
 function LogisticsServices() {
+
+  /**
+    * @param {integer} numbersOfElements value is the numbers of elements that slider show in display
+   */
+  let numbersOfElements = 3;
+
+  if (window.innerWidth < 800) {
+    numbersOfElements = 1;
+  }
+
+
+  console.log(numbersOfElements)
+
   return (
     <LogisticServicesContainer>
       <SmallTitle>What we do</SmallTitle>
       <Title>Logistics Services</Title>
       <Container className='LogisticsSection'>
         <Swiper
-          slidesPerView={3}
+          slidesPerView={numbersOfElements}
           spaceBetween={30}
           slidesPerGroup={1}
           loop={true}

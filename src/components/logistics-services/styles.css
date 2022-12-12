@@ -26,13 +26,22 @@
   -webkit-align-items: center;
   align-items: center;
   height: 585px;
-  opacity: 0.2;
+  opacity: 0.1;
 }
 
-/* .LogisticsSection .swiper-slide img { */
-/* opacity: 0.2; */
-/* border: 1px solid white; */
-/* } */
+
+@media (max-width: 800px) {
+  .LogisticsSection .swiper-slide img {
+    width: 80%;
+    object-fit: contain;
+    flex: 1;
+  }
+
+  .LogisticsSection .swiper-slide-active {
+    opacity: 1;
+  }
+
+}
 
 .LogisticsSection .swiper-pagination {
   display: none;
