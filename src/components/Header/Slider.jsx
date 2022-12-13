@@ -1,4 +1,3 @@
-import React, { useRef, useState } from "react";
 import styled from "styled-components";
 
 // Import Swiper React components
@@ -61,10 +60,10 @@ export default function Slider() {
         slidesPerGroup={1}
         loop={true}
         loopFillGroupWithBlank={true}
-        // autoplay={{
-        //   "delay": 1800,
-        //   "disableOnInteraction": false
-        // }}
+        autoplay={{
+          "delay": 1800,
+          "disableOnInteraction": false
+        }}
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper">
         {
