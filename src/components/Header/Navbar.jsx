@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import { React, useState, useEffect } from 'react'
 
 import styled from "styled-components";
+import { Link } from 'react-router-dom';
 
 import Logo from "../../assets/img/logo-white.svg";
 
@@ -31,6 +32,7 @@ const Nav = styled.nav`
 	position: fixed;
 	z-index: 10;
   transition: all 0.5s ease;
+  align-items: center;
 `
 
 const Menu = styled.div`
@@ -144,17 +146,24 @@ export default function Navbar() {
 
 
   function NavbarDesktop() {
+
+    const path = window.location.pathname;
+
     return (
       <Container>
         <Wrapper>
           <Nav className={isScroll ? "activeNavScroll" : " "}>
-            <img src={Logo} alt="" />
+            <Link to={"/"}>
+              <img src={Logo} alt="" />
+            </Link>
             <Menu>
               <MenuItem>
                 <a href="">Shippers</a>
               </MenuItem>
               <MenuItem>
-                <a href="">Carriers</a>
+                <Link to={"/carriers"} className={path === "/carriers" ? "activeLink" : ""}>
+                  Carriers
+                </Link>
               </MenuItem>
               <MenuItem>
                 <a href="">About Us</a>
@@ -258,4 +267,8 @@ export default function Navbar() {
       }
     </>
   )
+}
+
+function CustomLink(params) {
+
 }

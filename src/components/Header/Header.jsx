@@ -4,15 +4,29 @@ import styled from 'styled-components'
 import Navbar from "./Navbar";
 import Slider from "./Slider";
 
+
 const Container = styled.div`
   height: 100vh;
 `
 
-export default function Header() {
-	return (
-		<Container>
-			<Navbar />
-			<Slider />
-		</Container>
-	)
+/* TODO: Usar GPT3 para documentar mejor */
+/**
+* main header
+* @param {boolean} activeSwiper determines if the main slider or a sticky banner is displayed 
+* @param {String} imagesForBanner determines the rute for images it will that displayed in the banner
+*/
+
+export default function Header(props) {
+  const { activeSwiper, imagesForBanner, InfoForBanner, buttonTitle } = props;
+  return (
+    <Container>
+      <Navbar />
+      <Slider
+        activeSwiper={activeSwiper}
+        imagesForBanner={imagesForBanner}
+        InfoForBanner={InfoForBanner}
+        buttonTitle={buttonTitle}
+      />
+    </Container>
+  )
 }

@@ -49,18 +49,19 @@ const Info = styled.p`
   color: var(--white);
 `
 
-function index() {
+function index(props) {
+  const { title, contentInfo, videoSrc } = props;
   return (
     <Container className='workWithUs'>
       <video autoPlay loop muted playsInline className='video'>
-        <source src={video} type="video/mp4" />
+        <source src={videoSrc} type="video/mp4" />
       </video>
       <InfoContent>
         <Title>
-          Work with us and be part an amazing team!
+          {title}
         </Title>
         <Info>
-          With a company culture that empowers, every team member contributes to a network of connections built on trust.
+          {contentInfo}
         </Info>
         <Button>Find your Job</Button>
       </InfoContent>

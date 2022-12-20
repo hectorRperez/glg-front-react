@@ -15,18 +15,21 @@ const colors = {
 }
 
 
+/**
+
+La función Button es un componente de React que se utiliza para mostrar un botón en la interfaz de usuario.
+@param {Object} props - Los props del componente Button.
+@param {string} props.children - El contenido del botón.
+@param {string} props.size - El tamaño del botón. Puede ser "small", "medium" o "large".
+@param {string} props.color - El color del botón. Puede ser "primary", "secondary" o "tertiary".
+@param {bool} props.rounded - Un indicador de si el botón debe tener bordes redondeados.
+@param {string} props.className - Una clase CSS adicional para aplicar al botón.
+@param {Object} props.other - Cualquier otro atributo que se desee agregar al botón.
+*/
+
+// La función Button es un componente de React que muestra un botón en la interfaz de usuario.
 export const Button = (props) => {
 
-  /**
-* Custom Button
-* @param {Object} props it have multiples properties 
-* @param {String} children children
-* @param {String} size button length (medium or large)
-* @param {String} color button 
-* @param {Boolean} rounded true or false for rounded button 
-* @param {Object} className class CSS independent 
-* @return {Button} The Button ready for use
-*/
 
   const { children, size, color, rounded, className, ...other } = props;
 

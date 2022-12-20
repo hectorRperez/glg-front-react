@@ -2,6 +2,9 @@ import location1 from "./assets/img/location-1.png";
 import location2 from "./assets/img/location-2.png";
 import location3 from "./assets/img/location-3.png";
 
+import avatar1 from "./assets/img/avatar_1.png"
+import avatar2 from "./assets/img/avatar_2.png"
+
 
 export const imagesBanner = [
   {
@@ -79,4 +82,77 @@ export const locations = [
     direcction: "855 Ridge Lake Blvd #200, Memphis, TN 38120",
     number: "703-552-8753",
   }
+]
+
+export const infoForBanners = [
+  {
+    id: 1,
+    secction: "carriers",
+    info: "Finding the lanes you want, made easier!",
+    buttonTitle: "Join our network"
+  }
+]
+
+export const allServicesCarriers = [
+  {
+    id: 1,
+    iconServices: "src/assets/img/iconCard_1.png",
+    title: "Access to a divers selection of loads",
+    content: "At accumsan condimentum donec dictumst eros, tempus in diam. Ornare dictumst",
+  },
+  {
+    id: 2,
+    iconServices: "src/assets/img/iconCard_2.png",
+    title: "Access to a divers selection of loads",
+    content: "At accumsan condimentum donec dictumst eros, tempus in diam. Ornare dictumst",
+  },
+  {
+    id: 3,
+    iconServices: "src/assets/img/iconCard_3.png",
+    title: "Access to a divers selection of loads",
+    content: "At accumsan condimentum donec dictumst eros, tempus in diam. Ornare dictumst",
+  },
+  {
+    id: 4,
+    iconServices: "src/assets/img/iconCard_4.png",
+    title: "Access to a divers selection of loads",
+    content: "At accumsan condimentum donec dictumst eros, tempus in diam. Ornare dictumst",
+  },
+  {
+    id: 5,
+    iconServices: "src/assets/img/iconCard_5.png",
+    title: "Access to a divers selection of loads",
+    content: "At accumsan condimentum donec dictumst eros, tempus in diam. Ornare dictumst",
+  },
+  {
+    id: 6,
+    iconServices: "src/assets/img/iconCard_6.png",
+    title: "Access to a divers selection of loads",
+    content: "At accumsan condimentum donec dictumst eros, tempus in diam. Ornare dictumst",
+  },
+]
+
+export const feedbackCarriers = [
+  {
+    id: 1,
+    nameCarrier: "Hector Perez",
+    company: "Tesla",
+    feedbackInfo: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+    urlImages: avatar1,
+  },
+  {
+    id: 2,
+    nameCarrier: "Luis Gonzales",
+    company: "Amazon",
+    feedbackInfo: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+    urlImages: avatar2,
+  },
+  {
+    id: 3,
+    nameCarrier: "Armando Smith",
+    company: "Facebook Inc",
+    feedbackInfo: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+    urlImages: avatar1,
+  }
+
 ]

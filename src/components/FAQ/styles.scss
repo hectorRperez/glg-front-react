@@ -1,0 +1,37 @@
+@import url("../../styles.scss");
+
+.accordion-item {
+  background-color: transparent;
+}
+
+.accordion-button {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--body-font-gilroy-semi);
+  font-size: 18px;
+}
+
+.accordion-body {
+  color: var(--white);
+  font-size: 16px;
+  font-family: var(--body-font-gilroy-regular);
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+  border-bottom: 1px solid white;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: transparent;
+  color: var(--secondary-orange-2);
+}
+
+.accordion-button::after {
+  background-image: url("../../assets/img/arrow.png");
+  rotate: 180deg;
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-image: url("../../assets/img/arrow.png");
+}

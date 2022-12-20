@@ -12,6 +12,8 @@ import ContactUs from "../components/ContactUs/Index";
 import Citys from "../components/Citys/Citys";
 import Footer from "../components/Footer/Footer";
 
+import videoForJob from "../assets/img/jobs.mp4";
+
 export default function Home() {
   return (
     <>
@@ -21,7 +23,11 @@ export default function Home() {
       <OurClients />
       <LogisticsServices />
       <CarriersSection />
-      <WorkWithUs />
+      <WorkWithUs
+        title="Work with us and be part an amazing team!"
+        contentInfo="With a company culture that empowers, every team member contributes to a network of connections built on trust."
+        videoSrc={videoForJob}
+      />
       <ContactUs />
       <Citys />
       <Footer />

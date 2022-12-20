@@ -29,7 +29,6 @@ const SlideImage = styled.img`
 `
 
 const SlideInfo = styled.div`
-	width: 100%;
 	height: 100%;
 	position: absolute;
 	top: -5%;
@@ -38,7 +37,6 @@ const SlideInfo = styled.div`
 	justify-content: center;
 	flex-direction: column;
 	align-items: flex-start;
-	width: 638px;
 `
 
 const TitleInfo = styled.h1`
@@ -48,12 +46,23 @@ const TitleInfo = styled.h1`
 	font-weight: 900;
 	text-align: left;
   width: 70%;
-  ${movil({ width: "40%" })}
+  ${movil({ width: "90%" })}
 `
 
-export default function Slider() {
-  return (
-    <>
+/**
+* main Swiper
+* @param {boolean} activeSwiper 
+  determines if the main slider or a sticky banner is displayed 
+  for default activedSwiper is will in true
+* @param {String} imagesForBanner determines the rute for images it will that displayed in the banner
+*/
+export default function Slider(props) {
+
+  const { activeSwiper = true, imagesForBanner, InfoForBanner, buttonTitle } = props;
+
+
+  function ShowSwiper() {
+    return (
       <Swiper
         slidesPerView={1}
         spaceBetween={30}
@@ -74,8 +83,7 @@ export default function Slider() {
                 <TitleInfo>
                   {img.info}
                 </TitleInfo>
-                <Button onClick={console.log}
-                  size="medium">
+                <Button onClick={console.log} size="medium">
                   {img.buttonInfo}
                 </Button>
               </SlideInfo>
@@ -83,6 +91,33 @@ export default function Slider() {
           ))
         }
       </Swiper>
+    )
+  }
+
+  function StickyBanner(imagesForBanner, InfoForBanner) {
+    return (
+      <>
+        <SlideImage src={imagesForBanner}>
+        </SlideImage>
+        <SlideInfo>
+          <TitleInfo>
+            {InfoForBanner}
+          </TitleInfo>
+          <Button size="medium">
+            {buttonTitle}
+          </Button>
+        </SlideInfo>
+      </>
+    )
+  }
+
+  return (
+    <>
+      {
+        activeSwiper ?
+          ShowSwiper() :
+          StickyBanner(imagesForBanner, InfoForBanner)
+      }
     </>
   );
 }

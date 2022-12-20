@@ -9,9 +9,19 @@ export const desktop = (props) => {
   `;
 }
 
+/** <=900 */
 export const tablet = (props) => {
   return css`
-    @media only screen and (max-width:800px) {
+    @media only screen and (max-width:900px) {
+      ${props}
+    }
+  `;
+}
+
+/** <=600 */
+export const smallTablet = (props) => {
+  return css`
+    @media only screen and (max-width:600px) {
       ${props}
     }
   `;
