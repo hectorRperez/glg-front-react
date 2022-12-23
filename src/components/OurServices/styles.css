@@ -1,0 +1,39 @@
+@import url("../../styles.scss");
+
+.OurServicesWrapper {
+  margin-top: 83px;
+}
+
+.images-service {
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.title-service {
+  font-family: var(--body-font-barlow);
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--white);
+}
+
+.contentInfoWrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+}
+
+.contentInfoWrapper .info-content {
+  margin-top: 14px;
+  font-family: var(--body-font-gilroy-medium);
+  font-size: 18px;
+  color: var(--white);
+  text-align: justify;
+}
+
+.box-button {
+  display: flex;
+  justify-content: end;
+}

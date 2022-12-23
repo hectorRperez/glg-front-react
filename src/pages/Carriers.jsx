@@ -18,7 +18,14 @@ import Citys from '../components/Citys/Citys';
 import Footer from '../components/Footer/Footer';
 import FloatingButton from '../components/FloatingButton/FloatingButton';
 
+import bodyCheckOverflow from "../utils/bodyCheckOverflow";
+
+
 function Carriers() {
+
+  //set body overflow in "visible"
+  bodyCheckOverflow();
+
   return (
     <>
       <GlobalStyle />

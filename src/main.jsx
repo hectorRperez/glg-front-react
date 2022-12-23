@@ -4,6 +4,9 @@ import Home from './pages/Home'
 import Carriers from "./pages/Carriers";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Shippers from './pages/Shippers';
+
+
 
 /**
 * Custom Button
@@ -17,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: "/carriers",
     element: <Carriers />
+  },
+  {
+    path: "/shippers",
+    element: <Shippers />
   }
 ])
 

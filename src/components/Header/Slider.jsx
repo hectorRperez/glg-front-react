@@ -60,7 +60,6 @@ export default function Slider(props) {
 
   const { activeSwiper = true, imagesForBanner, InfoForBanner, buttonTitle } = props;
 
-
   function ShowSwiper() {
     return (
       <Swiper

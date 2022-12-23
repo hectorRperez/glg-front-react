@@ -5,6 +5,12 @@ import location3 from "./assets/img/location-3.png";
 import avatar1 from "./assets/img/avatar_1.png"
 import avatar2 from "./assets/img/avatar_2.png"
 
+import image1 from "./assets/img/logistic-item-1.png";
+import image2 from "./assets/img/logistic-item-2.png";
+import image3 from "./assets/img/element-3.png";
+import image4 from "./assets/img/element-7.jpg";
+import image5 from "./assets/img/element-8.jpg";
+import image6 from "./assets/img/element-5.png";
 
 export const imagesBanner = [
   {
@@ -90,6 +96,12 @@ export const infoForBanners = [
     secction: "carriers",
     info: "Finding the lanes you want, made easier!",
     buttonTitle: "Join our network"
+  },
+  {
+    id: 2,
+    secction: "shippers",
+    info: "Connecting shippers to a reliable network",
+    buttonTitle: "Get a Quote"
   }
 ]
 
@@ -130,6 +142,45 @@ export const allServicesCarriers = [
     title: "Access to a divers selection of loads",
     content: "At accumsan condimentum donec dictumst eros, tempus in diam. Ornare dictumst",
   },
+]
+
+export const allServicesShippers = [
+  {
+    id: 1,
+    imagesServices: image1,
+    titleServices: "Dry Van",
+    infoServices: "We offer both 48′ and 53′ capacity dry vans that can carry various types of shipment, including food and beverage, machinery, and even hazardous materials. This makes a great 3PL partner for many industries."
+  },
+  {
+    id: 2,
+    imagesServices: image2,
+    titleServices: "Temp Controlled",
+    infoServices: "We know how important it is to get the right carrier for refrigerated transportation. Count on us to match your due diligence on all carriers, ensuring the most secure transportation of perishable and refrigerated loads"
+  },
+  {
+    id: 3,
+    imagesServices: image3,
+    titleServices: "Flatbed",
+    infoServices: "Our partner carriers of flatbed trucks that offer various capacities. Utilize them for step-deck, drop-deck, and even flatbed less-than-truckload transport."
+  },
+  {
+    id: 4,
+    imagesServices: image4,
+    titleServices: "Less than a truckload",
+    infoServices: "We provide account-specific pricing, expedited LTL, white-glove services, and more. This is thanks to our network of connections with various common and non-common carriers in the LTL industry."
+  },
+  {
+    id: 5,
+    imagesServices: image5,
+    titleServices: "Dedicated Service",
+    infoServices: "Our dedicated carrier partners allow us to provide a consistent quality of shipping coordination. You can count on us to offer consistent transportation solutions for both ends of the logistics process 365 days a year."
+  },
+  {
+    id: 6,
+    imagesServices: image6,
+    titleServices: "Dedicated Service",
+    infoServices: "For quick deliveries, count on us. We offer expedited pricing and capacity in a matter of minutes. Whether it’s through team truckloads, cargo vans, straight trucking, or even air, our specialists will provide on-time delivery and real-time monitoring."
+  }
 ]
 
 export const feedbackCarriers = [

@@ -1,0 +1,63 @@
+@import url('../../styles.scss');
+
+.whyChooseTitle {
+  color: white;
+  font-family: var(--body-font-barlow);
+  text-align: center;
+  margin-bottom: 52px;
+}
+
+.WhyChooseGLG__card__title {
+  font-family: var(--body-font-barlow);
+  font-weight: 900;
+  font-size: 20px;
+  color: var(--white);
+  margin-bottom: 52px;
+  text-align: center;
+}
+
+.whyChooseCard {
+  border-radius: 30px;
+  height: 320px;
+  position: relative;
+  padding: 42px 42px;
+  background: transparent;
+  overflow: hidden;
+  backdrop-filter: blur(5px);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  transition: all 0.3s ease-in;
+  margin: 10px auto;
+}
+
+@media (min-width: 1200px) {
+  .whyChooseCard {
+    height: 444px;
+    width: 386px;
+  }
+}
+
+.whyChooseCard::before {
+  content: "";
+  left: 0;
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(217, 217, 217, 0.18);
+  z-index: -1;
+}
+
+.whyChooseCard:hover {
+  background-color: #1d77d4;
+}
+
+.WhyChooseGLG__card__content {
+  font-family: var(--body-font-gilroy-medium);
+  font-size: 18px;
+  color: var(--white);
+  text-align: justify;
+}

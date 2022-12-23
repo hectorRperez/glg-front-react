@@ -147,7 +147,10 @@ export default function Navbar() {
 
   function NavbarDesktop() {
 
-    const path = window.location.pathname;
+    function activeLink(href) {
+      const path = window.location.pathname;
+      return path === href ? "activeLink" : "";
+    }
 
     return (
       <Container>
@@ -158,10 +161,10 @@ export default function Navbar() {
             </Link>
             <Menu>
               <MenuItem>
-                <a href="">Shippers</a>
+                <Link to={"/shippers"} className={activeLink("/shippers")}>Shippers</Link>
               </MenuItem>
               <MenuItem>
-                <Link to={"/carriers"} className={path === "/carriers" ? "activeLink" : ""}>
+                <Link to={"/carriers"} className={activeLink("/carriers")}>
                   Carriers
                 </Link>
               </MenuItem>
@@ -189,10 +192,13 @@ export default function Navbar() {
 
     return (
       <ContainerMovil>
+
         <NavbarOnlyMovil className={isScroll ? "activeNavScroll" : " "}>
-          <a href="">
+          <Link to={'/'}>
             <img src={Logo} alt="" />
-          </a>
+          </Link>
+
+          {/* Evento que activa el menu en movil */}
           <a onClick={() => {
             setIsToggle(!isToggle)
             let body = document.querySelector("body")
@@ -200,7 +206,7 @@ export default function Navbar() {
             if (!isToggle) {
               body.style.overflow = "hidden";
             } else {
-              body.style.overflow = "auto";
+              body.style.overflow = "visible";
             }
           }}
             className={classNav}>
@@ -211,13 +217,13 @@ export default function Navbar() {
           <MenuMovil className="item animate__animated animate__zoomIn">
             <ul className='menu-list'>
               <li className="item animate__animated animate__fadeInRight">
-                <a href="">Home</a>
+                <Link to={"/"}>Home</Link>
               </li>
               <li className="item animate__animated animate__fadeInLeft">
-                <a href="">Shippers</a>
+                <Link to={"/shippers"}>Shippers</Link>
               </li>
               <li className="item animate__animated animate__fadeInRight">
-                <a href="">Carriers</a>
+                <Link to={"/carriers"}>Carriers</Link>
               </li>
               <li className="item animate__animated animate__fadeInLeft">
                 <a href="">About Us</a>
@@ -267,8 +273,4 @@ export default function Navbar() {
       }
     </>
   )
-}
-
-function CustomLink(params) {
-
 }

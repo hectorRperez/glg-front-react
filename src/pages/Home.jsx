@@ -12,9 +12,15 @@ import ContactUs from "../components/ContactUs/Index";
 import Citys from "../components/Citys/Citys";
 import Footer from "../components/Footer/Footer";
 
+import bodyCheckOverflow from "../utils/bodyCheckOverflow";
+
 import videoForJob from "../assets/img/jobs.mp4";
 
 export default function Home() {
+
+  //set body overflow in "visible"
+  bodyCheckOverflow();
+
   return (
     <>
       <GlobalStyle />
