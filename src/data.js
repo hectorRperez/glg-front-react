@@ -5,6 +5,11 @@ import location3 from "./assets/img/location-3.png";
 import avatar1 from "./assets/img/avatar_1.png"
 import avatar2 from "./assets/img/avatar_2.png"
 
+import banner1 from "./assets/img/banner-image-1.png"
+import banner2 from "./assets/img/banner-image-2.png"
+import banner3 from "./assets/img/banner-image-3.png"
+import banner4 from "./assets/img/banner-image-4.png"
+
 import image1 from "./assets/img/logistic-item-1.png";
 import image2 from "./assets/img/logistic-item-2.png";
 import image3 from "./assets/img/element-3.png";
@@ -15,25 +20,25 @@ import image6 from "./assets/img/element-5.png";
 export const imagesBanner = [
   {
     id: 1,
-    src: "src/assets/img/banner-image-1.png",
+    src: banner1,
     info: "Making Transportation Fast and Safe",
     buttonInfo: "Get a Quote",
   },
   {
     id: 2,
-    src: "src/assets/img/banner-image-2.png",
+    src: banner2,
     info: "Connecting shippers to a reliable network",
     buttonInfo: "Get a Quote",
   },
   {
     id: 3,
-    src: "src/assets/img/banner-image-3.png",
+    src: banner3,
     info: "Finding the lanes you want, made easier!",
     buttonInfo: "Join our network",
   },
   {
     id: 4,
-    src: "src/assets/img/banner-image-4.png",
+    src: banner4,
     info: "Living and breathing freight forwarding in Virginia!",
     buttonInfo: "Join our network",
   }
