@@ -48,7 +48,7 @@
 
 .floating-container {
   position: fixed;
-  z-index: 100;
+  z-index: 1;
   width: 100px;
   height: 100px;
   bottom: 0;

@@ -169,10 +169,10 @@ export default function Navbar() {
                 </Link>
               </MenuItem>
               <MenuItem>
-                <a href="">About Us</a>
+                <Link to={"/aboutUs"} className={activeLink("/aboutUs")}>About Us</Link>
               </MenuItem>
               <MenuItem>
-                <a href="">Job&Careers</a>
+                <Link to={"/jobs"} className={activeLink("/jobs")}>Job&Careers</Link>
               </MenuItem>
               <MenuItem>
                 <a href="">Blog</a>
@@ -226,10 +226,10 @@ export default function Navbar() {
                 <Link to={"/carriers"}>Carriers</Link>
               </li>
               <li className="item animate__animated animate__fadeInLeft">
-                <a href="">About Us</a>
+                <Link to={"/aboutUs"}>About Us</Link>
               </li>
               <li className="item animate__animated animate__fadeInRight">
-                <a href="">Job&Careers</a>
+                <Link to={"/jobs"} href="">Job&Careers</Link>
               </li>
               <li className="item animate__animated animate__fadeInLeft">
                 <a href="">Blog</a>

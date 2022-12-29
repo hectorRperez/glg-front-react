@@ -22,10 +22,14 @@ import FloatingButton from '../components/FloatingButton/FloatingButton';
 
 import bodyCheckOverflow from "../utils/bodyCheckOverflow";
 
+//set scroll on top for default
+import scrollToTop from "../utils/scrollToTop";
 
 export default function Shippers() {
   //set body overflow in "visible"
   bodyCheckOverflow();
+  scrollToTop();
+
   return (
     <>
       <GlobalStyle />

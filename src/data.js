@@ -102,6 +102,18 @@ export const infoForBanners = [
     secction: "shippers",
     info: "Connecting shippers to a reliable network",
     buttonTitle: "Get a Quote"
+  },
+  {
+    id: 3,
+    secction: "about us",
+    info: "Living and breathing freight forwarding in Virginia!",
+    buttonTitle: "Join our network"
+  },
+  {
+    id: 4,
+    section: "Jobs&Caeers",
+    info: "Work with the best team Global Logistics Group!",
+    buttonTitle: "Apply Now"
   }
 ]
 

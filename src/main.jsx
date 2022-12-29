@@ -1,11 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Home from './pages/Home'
-import Carriers from "./pages/Carriers";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Shippers from './pages/Shippers';
 
+//Custom components
+import Home from './pages/Home'
+import Carriers from "./pages/Carriers";
+import Shippers from './pages/Shippers';
+import AboutUs from "./pages/AboutUs";
+import Jobs from './pages/Jobs';
 
 
 /**
@@ -24,6 +27,14 @@ const router = createBrowserRouter([
   {
     path: "/shippers",
     element: <Shippers />
+  },
+  {
+    path: "/aboutUs",
+    element: <AboutUs />
+  },
+  {
+    path: "jobs",
+    element: <Jobs />
   }
 ])
 

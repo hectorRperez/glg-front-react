@@ -5,6 +5,7 @@ import Col from 'react-bootstrap/Col';
 
 import 'boxicons'
 
+import { Link } from "react-router-dom";
 
 import styled from "styled-components";
 
@@ -61,12 +62,6 @@ const LinkItem = styled.li`
   margin: 24px 0;
 `
 
-const Link = styled.a`
-  font-weight: 700;
-  font-size: 18px;
-  color: var(--white);
-`
-
 const Col_2 = styled.div`
 `
 
@@ -88,8 +83,12 @@ const SocialMediaWrapper = styled.div`
   gap: 10px;
 `
 
-const SocialLink = styled.a`
-  background: var(--white);
+const SocialLink = styled.div`
+  i{
+    font-size: 30px;
+    color: #041320;
+    background-color: white;
+  }
 `
 
 export default function Footer() {
@@ -107,22 +106,20 @@ export default function Footer() {
               </Title>
               <ul>
                 <LinkItem>
-                  <Link>
-                    Shippers
-                  </Link>
+                  <Link to={"/shippers"}>Shippers</Link>
                 </LinkItem>
                 <LinkItem>
-                  <Link>
+                  <Link to={"/carriers"}>
                     Carriers
                   </Link>
                 </LinkItem>
                 <LinkItem>
-                  <Link>
+                  <Link to={"/aboutUs"}>
                     About Us
                   </Link>
                 </LinkItem>
                 <LinkItem>
-                  <Link>
+                  <Link to={"/jobs"}>
                     Jobs&Careers
                   </Link>
                 </LinkItem>
@@ -168,31 +165,20 @@ export default function Footer() {
                 SOCIAL MEDIA
               </Title>
               <SocialMediaWrapper>
+                {/* TODO: AGREGAR LOS ENLACES*/}
                 <SocialLink>
-                  <box-icon
-                    type='logo'
-                    name='twitter'
-                    color="black"
-                    size={"30px"}
-                  >
-                  </box-icon>
+                  <a target="_blank" href="https://www.linkedin.com/company/global-logistics-group-va/mycompany/">
+                    <i class='bx bxl-twitter' ></i>
+                  </a>
                 </SocialLink>
                 <SocialLink>
-                  <box-icon
-                    name='facebook'
-                    type='logo'
-                    color="black"
-                    size={"30px"}></box-icon>
+                  <i class='bx bxl-facebook' ></i>
                 </SocialLink>
                 <SocialLink>
-                  <box-icon
-                    name='instagram'
-                    type='logo'
-                    color="black"
-                    size={"30px"}></box-icon>
+                  <i class='bx bxl-instagram' ></i>
                 </SocialLink>
                 <SocialLink>
-                  <box-icon name='linkedin' type='logo' color="black" size={"30px"}></box-icon>
+                  <i class='bx bxl-linkedin' ></i>
                 </SocialLink>
               </SocialMediaWrapper>
             </Col_2>

@@ -69,7 +69,7 @@ export default function Slider(props) {
         loop={true}
         loopFillGroupWithBlank={true}
         autoplay={{
-          "delay": 1800,
+          "delay": 4800,
           "disableOnInteraction": false
         }}
         modules={[Autoplay, Pagination, Navigation]}

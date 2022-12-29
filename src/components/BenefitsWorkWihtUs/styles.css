@@ -1,0 +1,39 @@
+@import url("../../styles.scss");
+
+.benefist .small-title {
+  font-family: var(--body-font-gilroy-semi);
+  font-size: 24px;
+  color: var(--secondary-orange-2);
+  margin-bottom: 25px;
+}
+
+.benefist .big-title {
+  font-family: var(--body-font-barlow);
+  font-size: 32px;
+  color: var(--white);
+}
+
+.benefist .element {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 60px;
+}
+
+.benefist .element img {
+  width: 40px;
+  height: 40px;
+}
+
+.benefist .element h3 {
+  font-size: 24px;
+  font-family: var(--body-font-barlow);
+  font-weight: 900;
+  color: var(--white);
+}
+
+.benefist .element a {
+  color: var(--secondary-orange-2);
+  text-decoration: underline;
+  font-size: 16px;
+}

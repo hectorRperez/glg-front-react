@@ -1,28 +1,29 @@
 import React from 'react'
 
+
+//data for header in the banner
 import { infoForBanners } from "../data";
+import imagesForBanner from "../assets/img/banner-about-us.png"
+
+import GlobalStyle from "../globalStyles";
+
 import videoForCarriers from "../assets/img/carriers.mp4";
 
-import imagesForBanner from "../assets/img/banner-image-3.png"
-import GlobalStyle from '../globalStyles';
 
-/** Custom components */
+//Custom components
 import Header from "../components/Header/Header";
+import ContentMain from "../components/ContentMain/ContentMain";
+import WhychooseGlg from '../components/WhychooseGLG/WhychooseGlg';
 import WorkWithUs from "../components/WorkWithUs/index";
-import Benefits from '../components/Benefits/Benefits';
-import PayOption from '../components/PayOption/PayOption';
 import FeedbackSwipper from '../components/FeedbackSwiper/FeedbackSwipper';
-import FAQ from '../components/FAQ/FAQ';
 import ContactUs from "../components/ContactUs/Index";
 import Citys from '../components/Citys/Citys';
 import Footer from '../components/Footer/Footer';
-import FloatingButton from '../components/FloatingButton/FloatingButton';
 
 import bodyCheckOverflow from "../utils/bodyCheckOverflow";
 import scrollToTop from "../utils/scrollToTop";
 
-
-function Carriers() {
+export default function AboutUs() {
 
   //set body overflow in "visible"
   bodyCheckOverflow();
@@ -34,28 +35,24 @@ function Carriers() {
       <Header
         activeSwiper={false}
         imagesForBanner={imagesForBanner}
-        InfoForBanner={infoForBanners[0].info}
-        buttonTitle={infoForBanners[0].buttonTitle}
+        InfoForBanner={infoForBanners[2].info}
+        buttonTitle={infoForBanners[2].buttonTitle}
       >
       </Header>
-      <Benefits />
-      <PayOption />
+      <ContentMain />
+      <WhychooseGlg />
       <WorkWithUs
-        title="Haul with us"
-        contentInfo="We use state-of-the-art technology to keep in touch with a wide network of carriers. Our specialists help customers choose from a large number of shipments per day."
+        title="Join our great team"
+        contentInfo="Are you interested in a promising logistics career? Take this opportunity and join Global Logistics Group."
         videoSrc={videoForCarriers}
       />
       <FeedbackSwipper
-        smallTitle="Carriers Feed Back"
-        bigTitle="What our carriers says"
+        smallTitle="workers feedback"
+        bigTitle="What our workers says"
       />
-      <FAQ />
       <ContactUs />
       <Citys />
       <Footer />
-      <FloatingButton />
     </>
   )
 }
-
-export default Carriers
