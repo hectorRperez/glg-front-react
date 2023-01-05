@@ -97,7 +97,7 @@ export default function Welcome() {
   return (
     <Container bg={bg}>
       <SmallTitle style={{}}>
-        Welcome to Global Logistics Group
+        Welcome to Global Logistics Grouppp
       </SmallTitle>
       <Title>
         Making transportation fast and safe
