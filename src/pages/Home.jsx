@@ -1,4 +1,4 @@
-import React from 'react'
+import { React, useEffect, useState } from 'react'
 
 import GlobalStyle from '../globalStyles';
 /* All Components */
@@ -15,28 +15,45 @@ import Footer from "../components/Footer/Footer";
 import bodyCheckOverflow from "../utils/bodyCheckOverflow";
 
 import videoForJob from "../assets/img/jobs.mp4";
+import Loading from '../components/Loading/Loading';
 
 export default function Home() {
 
   //set body overflow in "visible"
   bodyCheckOverflow();
 
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true);
+    window.addEventListener("load", () => {
+      setLoading(false);
+    })
+  }, [])
+
   return (
     <>
       <GlobalStyle />
-      <Header />
-      <Welcome />
-      <OurClients />
-      <LogisticsServices />
-      <CarriersSection />
-      <WorkWithUs
-        title="Work with us and be part an amazing team!"
-        contentInfo="With a company culture that empowers, every team member contributes to a network of connections built on trust."
-        videoSrc={videoForJob}
-      />
-      <ContactUs />
-      <Citys />
-      <Footer />
+      {
+        loading ?
+          <Loading />
+          :
+          <div>
+            <Header />
+            <Welcome />
+            <OurClients />
+            <LogisticsServices />
+            <CarriersSection />
+            <WorkWithUs
+              title="Work with us and be part an amazing team!"
+              contentInfo="With a company culture that empowers, every team member contributes to a network of connections built on trust."
+              videoSrc={videoForJob}
+            />
+            <ContactUs />
+            <Citys />
+            <Footer />
+          </div>
+      }
     </>
   )
 }
