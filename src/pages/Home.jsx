@@ -26,9 +26,12 @@ export default function Home() {
 
   useEffect(() => {
     setLoading(true);
-    window.addEventListener("load", () => {
+    // window.addEventListener("load", () => {
+    //   setLoading(false);
+    // })
+    setTimeout(() => {
       setLoading(false);
-    })
+    }, 8000);
   }, [])
 
   return (
