@@ -36,6 +36,7 @@ function Carriers() {
         imagesForBanner={imagesForBanner}
         InfoForBanner={infoForBanners[0].info}
         buttonTitle={infoForBanners[0].buttonTitle}
+        heroArea={true}
       >
       </Header>
       <Benefits />

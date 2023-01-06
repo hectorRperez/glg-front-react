@@ -31,7 +31,7 @@ export default function Home() {
     // })
     setTimeout(() => {
       setLoading(false);
-    }, 8000);
+    }, 5000);
   }, [])
 
   return (
@@ -42,7 +42,7 @@ export default function Home() {
           <Loading />
           :
           <div>
-            <Header />
+            <Header heroArea={false} />
             <Welcome />
             <OurClients />
             <LogisticsServices />

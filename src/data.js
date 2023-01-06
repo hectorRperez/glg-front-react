@@ -17,6 +17,12 @@ import image4 from "./assets/img/element-7.jpg";
 import image5 from "./assets/img/element-8.jpg";
 import image6 from "./assets/img/element-5.png";
 
+//Services images
+import service1 from "./assets/img/logistic-item-1.png";
+import service2 from "./assets/img/logistic-item-2.png";
+import service3 from "./assets/img/logistic-item-3.png";
+import service4 from "./assets/img/logistic-item-1.png";
+
 export const imagesBanner = [
   {
     id: 1,
@@ -47,25 +53,25 @@ export const imagesBanner = [
 export const services = [
   {
     id: 1,
-    src: "src/assets/img/logistic-item-1.png",
+    src: service1,
     nameServices: "Dry Van",
     infoServices: "We offer both 48′ and 53′ capacity dry vans that can carry various types of shipment...",
   },
   {
     id: 2,
-    src: "src/assets/img/logistic-item-2.png",
+    src: service2,
     nameServices: "Full Truckload",
     infoServices: "We know how important it is to get right carrier for regrigerated transportation..",
   },
   {
     id: 3,
-    src: "src/assets/img/logistic-item-3.png",
+    src: service3,
     nameServices: "Less- Than - Truckload",
     infoServices: "We offer both 48′ and 53′ capacity dry vans that can carry various types of shipment...",
   },
   {
     id: 4,
-    src: "src/assets/img/logistic-item-3.png",
+    src: service1,
     nameServices: "Less- Than - Truckload",
     infoServices: "We offer both 48′ and 53′ capacity dry vans that can carry various types of shipment...",
   }

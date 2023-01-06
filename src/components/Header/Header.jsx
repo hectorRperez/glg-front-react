@@ -1,8 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 
+//Custom
 import Navbar from "./Navbar";
 import Slider from "./Slider";
+import HeroVideo from './HeroVideo';
 
 
 const Container = styled.div`
@@ -17,16 +19,22 @@ const Container = styled.div`
 */
 
 export default function Header(props) {
-  const { activeSwiper, imagesForBanner, InfoForBanner, buttonTitle } = props;
+  const { activeSwiper, imagesForBanner, InfoForBanner, buttonTitle, heroArea = true } = props;
   return (
     <Container>
       <Navbar />
-      <Slider
-        activeSwiper={activeSwiper}
-        imagesForBanner={imagesForBanner}
-        InfoForBanner={InfoForBanner}
-        buttonTitle={buttonTitle}
-      />
+      {
+        heroArea ?
+          <Slider
+            activeSwiper={activeSwiper}
+            imagesForBanner={imagesForBanner}
+            InfoForBanner={InfoForBanner}
+            buttonTitle={buttonTitle}
+          />
+          :
+          <HeroVideo />
+      }
+
     </Container>
   )
 }
