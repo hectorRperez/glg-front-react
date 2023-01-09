@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 /* Custom components */
 import { Button } from "../Buttons/index";
+import ProgressBar from './ProgressBar';
 
 import "../../styles.scss";
 
@@ -58,7 +59,6 @@ const StatisticsWrapper = styled.div`
 	flex-direction: column;
 	margin-top: 40px;
 	justify-content: space-evenly;
-	width: 60%;
 	margin: 0 auto;
 `
 
@@ -71,7 +71,9 @@ const StatisticsItem = styled.div`
 
 const WrapperItems = styled.div`
 	display: flex;
-	justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 	width: 100%;
 	margin-bottom: 25px;
   ${tablet({
@@ -93,10 +95,30 @@ const InfoStatistics = styled.span`
 	color: var(--white);
 `
 
+const WrapperProgressBar = styled.div`
+  display: flex;
+  gap: 50px;
+  padding: 25px 0;
+  justify-content: center;
+  width: 60%;
+  align-items: center;
+  ${tablet({
+  flexDirection: "column",
+  gap: "1px",
+  textAlign: "initial",
+  alignItems: "flex-start"
+})}
+
+  p{
+    color: white;
+    width: 250px;
+  }
+`
+
 export default function Welcome() {
   return (
     <Container bg={bg}>
-      <SmallTitle style={{}}>
+      <SmallTitle>
         Welcome to Global Logistics Grouppp
       </SmallTitle>
       <Title>
@@ -115,36 +137,18 @@ export default function Welcome() {
       <StatisticsWrapper>
 
         <WrapperItems>
-
-          {/* item 1 */}
-          <StatisticsItem>
-            <NumberStatistics>
-              15Y
-            </NumberStatistics>
-            <InfoStatistics>
-              Average Loads Per Day
-            </InfoStatistics>
-          </StatisticsItem>
-
-          {/* item 2 */}
-          <StatisticsItem>
-            <NumberStatistics>
-              90+
-            </NumberStatistics>
-            <InfoStatistics>
-              Best Team
-            </InfoStatistics>
-          </StatisticsItem>
-
-          {/* item 3 */}
-          <StatisticsItem>
-            <NumberStatistics>
-              500+
-            </NumberStatistics>
-            <InfoStatistics>
-              Total Client
-            </InfoStatistics>
-          </StatisticsItem>
+          <WrapperProgressBar>
+            <p>daily loads</p>
+            <ProgressBar counter={90} />
+          </WrapperProgressBar>
+          <WrapperProgressBar>
+            <p>trucks en route</p>
+            <ProgressBar counter={75} />
+          </WrapperProgressBar>
+          <WrapperProgressBar>
+            <p>customers served</p>
+            <ProgressBar counter={93} />
+          </WrapperProgressBar>
         </WrapperItems>
         <Button>
           More about us

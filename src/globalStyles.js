@@ -16,6 +16,10 @@ const GlobalStyle = createGlobalStyle`
         font-family: var(--body-font-barlow);
     }
 
+    p{
+      margin: 0;
+    }
+
     .containerElement{
         width: 90%;
         margin: 0 auto;

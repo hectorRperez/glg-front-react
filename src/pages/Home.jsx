@@ -25,13 +25,13 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    setLoading(true);
+    // setLoading(true);
     // window.addEventListener("load", () => {
     //   setLoading(false);
     // })
-    setTimeout(() => {
-      setLoading(false);
-    }, 5000);
+    // setTimeout(() => {
+    // setLoading(false);
+    // }, 5000);
   }, [])
 
   return (
